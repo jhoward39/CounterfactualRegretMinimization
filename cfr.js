@@ -10,7 +10,7 @@ class Game {
     console.log("this.strategy: ", this.strategy)
     this.regretSum =[[0,0,0],[0,0,0],[0,0,0]];
     this.strategySum =[[0,0,0],[0,0,0],[0,0,0]];
-    this.board = [[4,0,4],[0,0,0],[0,0,0]];
+    this.board = [[4,0,4],[0,0,0],[0,0,0]]; //shouldbe all zeros
     console.log("this.board: ", this.board);
 
   }
@@ -260,7 +260,7 @@ function calcCounterfactualRegret(game, history, p0, p1) {
 function train(iterations){
   console.log("train started")
   let gameSeed = new Game();
-  console.log("gameseed gameboard: ", gameSeed.board);
+  //console.log("gameseed gameboard: ", gameSeed.board);
   let util =0;
   for(let i = 0; i<iterations;i++){
     util += calcCounterfactualRegret(gameSeed,"",1,1);
