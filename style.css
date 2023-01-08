@@ -1,0 +1,28 @@
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.board {
+    width: 315px;
+    height: 315px;
+    margin-left: 10%;
+    margin-top: 5%;
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center; 
+    align-content: center; 
+
+}
+
+.trainbttn{
+    margin-left: 25%;
+    margin-top: 5%;
+}
