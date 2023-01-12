@@ -128,11 +128,14 @@ function calcCounterfactualRegret(grid, history, p0, p1) {
   if(plays>3){
     let winner = isPlayerWinner(grid,currentPlayer);//someone wins
     if (winner!=0){
-       //console.log("hello");
-       return winner;
+      //console.log("hello");
+      // let nodesPerLevel = 362880/factorial(9-plays);
+      // renderNode(plays,nodesPerLevel);
+      return winner;
     }
     if (isFull(grid)) {
-      
+      // let nodesPerLevel = 362880/factorial(9-plays);
+      // renderNode(plays,nodesPerLevel);
       return 0;
     } //is a winner, return 1 or 0
   }
@@ -157,6 +160,10 @@ function calcCounterfactualRegret(grid, history, p0, p1) {
   else{
     game_node= GameMap[infoset];
   }
+  let nodesPerLevel = (362880/factorial(9-plays));
+  // console.log("nodesPerLevel[",plays,"]: ", nodesPerLevel);
+  renderNode(plays+1,nodesPerLevel);
+
   //for each action, recursively call cfr with additional history and probibility
   let param=p0;
   if(currentPlayer==1) param = p1;
@@ -196,7 +203,9 @@ function calcCounterfactualRegret(grid, history, p0, p1) {
     if(currentPlayer==0) game_node.regretSum[actions[i]] += p1 * regret;
     else game_node.regretSum[actions[i]] += p0 * regret;
   }
- 
+  
+  // let nodesPerLevel = 362880/factorial(9-plays);
+  // renderNode(plays,nodesPerLevel);
   return gameUtil;
 
 }
@@ -214,11 +223,45 @@ function train(iterations){
   console.log("training end.")
 }
 
+/**
+ * Takes in integer level and integer n, renders a node inside GameMap at position in GameMap
+* @param l: describes which level in GameMap the node is to be placed.
+*@param n: the number of nodes in level, l
+*/
+function renderNode(l,n){
+  //create element
+  let animationContainer = document.getElementById("gameMapOne");
+  let element = document.createElement('div');
+  element.classList = "node";
+  animationContainer.appendChild(element);
+  //append 
+  let lstring = ((l*10)).toString()+"%";
+  element.style.left = lstring;
+  let nstring = ((1/n)*100).toPrecision(10).toString()+"%"
+  element.style.top = nstring;
+  console.log("level:", l);
+  
+  }
 
+function factorial(n){
+  //base case
+  if(n == 0 || n == 1){
+      return 1;
+  //recursive case
+  }else{
+      return n * factorial(n-1);
+  }
+}
 
 //MAIN METHOD
 trainbttn=document.getElementById('trainbttn');
 trainbttn.onclick= function(){
-  train(1);
+  let placeHolder = document.getElementById("placeHolder");//remove placeholder
+  placeHolder.innerHTML="Wait for training <30sec";
+  train(1); //train and fill out GameMap;
+
+  //renderNode(0,1);
+  
 }
 // train(1);
+

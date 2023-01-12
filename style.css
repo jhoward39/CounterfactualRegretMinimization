@@ -1,4 +1,6 @@
-
+.container{
+    display:flex;
+}
 .cell {
     width: 100px;
     height: 100px;
@@ -24,5 +26,31 @@
 
 .trainbttn{
     margin-left: 25%;
-    margin-top: 5%;
+    margin-top: 0%;
+}
+
+.gameMap{
+    position: relative;
+    width: 40%;
+    height: 400px; 
+    margin-left: 4%;
+    margin-top: 0%;
+    border: 1px solid black;
+}
+
+.gameMap h3{
+    text-align: center;
+}
+
+.node{
+    height: 5px;
+    width: 5px;
+    background-color: rgb(98, 0, 255);
+    border-radius: 90%;
+    position: absolute; 
+    top: 50%;
+    margin-left: 0%;
+    offset-position: 375px;  
+    -ms-transform: translateY(-50%); 
+    transform: translateY(-50%); 
 }
