@@ -116,7 +116,6 @@ function getGridString(grid){
   }
   return hash;
 }
-
 /*calcCounterfactualRegret is a recursive function which calcu */
 function calcCounterfactualRegret(grid, history, p0, p1) {
   plays = history.length;
@@ -205,7 +204,7 @@ function calcCounterfactualRegret(grid, history, p0, p1) {
   }
   
   // let nodesPerLevel = 362880/factorial(9-plays);
-  // renderNode(plays,nodesPerLevel);
+  renderNode(plays,nodesPerLevel);
   return gameUtil;
 
 }
@@ -237,7 +236,7 @@ function renderNode(l,n){
   //append 
   let lstring = ((l*10)).toString()+"%";
   element.style.left = lstring;
-  let nstring = ((1/n)*100).toPrecision(10).toString()+"%"
+  let nstring = (Math.random()*100).toPrecision(9).toString()+"%"
   element.style.top = nstring;
   console.log("level:", l);
   
@@ -257,11 +256,31 @@ function factorial(n){
 trainbttn=document.getElementById('trainbttn');
 trainbttn.onclick= function(){
   let placeHolder = document.getElementById("placeHolder");//remove placeholder
-  placeHolder.innerHTML="Wait for training <30sec";
+  placeHolder.remove();
   train(1); //train and fill out GameMap;
-
+  //console.log("gameMap", GameMap);
   //renderNode(0,1);
-  
+  //playTicTacToe();
 }
 // train(1);
 
+function displayGrid(UserGrid){
+  actions = getActions(UserGrid)
+  for(let i =0;i<UserGrid.length;i++){
+    if(UserGrid[i]!=0){
+      let cellstr= "cell"+(i+1).toString();
+      let cell = document.getElementById(cellstr);
+      if(UserGrid[i]==-1) cell.innerHTML="o";
+      if(UserGrid[i]==1) cell.innerHTML="x"
+    }
+  }
+}
+
+function playTicTacToe(){
+  //display grid
+  let UserGrid = [0,0,0,0,0,0,0,0,0];
+  let notDone= true;
+  while (notDone){
+    notDone=false;
+  }
+}
