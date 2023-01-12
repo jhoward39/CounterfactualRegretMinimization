@@ -2,6 +2,8 @@
 
 #This is an implementation and Visualization of the Machine Learning Algorithm used in Game Theory Optimal(GTO) Solvers for imperfect information games like Poker.
 
+Access Link at: https://jhoward39.github.io/cfr/
+
 In the near future I'd like to have the strategy network update iteratively, instead of waiting 30 seconds.
 It should look something like the picture:
 
