@@ -5,5 +5,6 @@
 In the near future I'd like to have the strategy network update iteratively, instead of waiting 30 seconds.
 It should look something like the picture:
 
+<img width="625" alt="Screenshot 2023-01-11 at 9 44 23 PM" src="https://user-images.githubusercontent.com/70383367/211963507-3082ee65-ab58-486e-96ac-3b7353814b63.png">
 
-<img width="632" alt="Screenshot 2023-01-11 at 9 43 54 PM" src="https://user-images.githubusercontent.com/70383367/211963459-7f411395-4051-4265-a7ff-63dcd7e74d2a.png">
+
