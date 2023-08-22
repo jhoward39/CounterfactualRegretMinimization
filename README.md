@@ -4,7 +4,7 @@ I was overly blessed to study abroad at Oxford University. While I was there I p
 This is where I became interested in the science that beat humans in the game of texas hold em' developed by Noam Brown https://noambrown.github.io/. Before developing the programs that beat professionals at the game of no limit texas hold em, he was an algo trader at MJM here in new york. He now works as a research scientist at Meta. This project came from my fascination with his work. This work was followed by Eric Steinberger's algorithm, single-deep counterfactual regret minimization, another hero of mine. This implementation follows Noam Brown's algorithm.
 
 # Situation
-Maaheen wants to learn about the algorithms we have to solve imperfect information games. Maaheen can log into this site, click run, and see a beautiful, iterative visualization of the algorithm as it traverses the game tree, creating a strategy for each action point. WellMaaheen should look elsewhere because this project is nowhere near good enough to call complete. 
+Maaheen wants to learn about the algorithms we have to solve imperfect information games. Maaheen can log into this site, click run, and see a beautiful, iterative visualization of the algorithm as it traverses the game tree, creating a strategy for each action point. Well, Maaheen should look elsewhere because this project is nowhere near good enough to call complete. 
 
 The underlying algorithm is in javascript. I don't know what I was thinking... 
 
