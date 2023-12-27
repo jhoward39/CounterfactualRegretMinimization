@@ -1,3 +1,5 @@
+# TLDR: This is the training algorithm used to beat humans in texas hold em' (poker). It's a visualisation of it on a small scale using javascript, html, and css.
+
 # Overview
 I was overly blessed to study abroad at Oxford University. While I was there I picked up the poker bug at the Oxford Poker Society. The organisation (notice the spelling) of roughly 35-50 students meet weekly for low-stakes cash games somewhere on campus, try getting that approved at a Jesuit institution like Fordham. It was beautiful, on each hand we could use calculators to check the pot odds at the table. After Oxford, I stayed in Europe for 8 weeks. I traveled to a new city every other day with a Eurorail pass, staying in hostels, and playing poker in every damn city. There were swings, but I stayed extremely patient and only played when I knew there was a profitable strategy to execute. After 8 weeks I had profited $3,220 (after conversion fees). I had spent, $5,800 on the entire trip including Oxford and the subsequent 8 weeks. Not bad. 
 
